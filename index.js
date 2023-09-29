@@ -13,13 +13,13 @@
 const selectPlan = (planNumber) => {
   if (planNumber === 'zakladni') {
     document.querySelector('#plan1').classList.add('plan--selected');
-  } else if (planNumber === 'plus') {
+  } else if (planNumber === 'rozsireny') {
     document.querySelector('#plan2').classList.add('plan--selected');
   } else {
     document.querySelector('#plan3').classList.add('plan--selected');
   }
 };
-document.querySelector('#plan1').classList.remove('plan--selected')
+document.querySelector('#plan1').classList.remove('plan--selected');
 
-const whichPlan = prompt('Which plan do you wish to change?');
-selectPlan(whichPlan);
+const tarif = prompt('Jaký si přejete tarif?').toLowerCase();
+selectPlan(tarif);
